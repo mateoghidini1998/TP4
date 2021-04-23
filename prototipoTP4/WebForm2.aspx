@@ -27,6 +27,9 @@
                     <td class="auto-style2">Id Producto:</td>
                     <td class="auto-style3">
                         <asp:DropDownList ID="ddlIdProducto" runat="server">
+                            <asp:ListItem Value="=">Igual a</asp:ListItem>
+                            <asp:ListItem Value=" &gt;">Mayor a</asp:ListItem>
+                            <asp:ListItem Value="&lt;">Menor a</asp:ListItem>
                         </asp:DropDownList>
                     </td>
                     <td>
@@ -37,10 +40,13 @@
                     <td class="auto-style2">Id Categoria:</td>
                     <td class="auto-style3">
                         <asp:DropDownList ID="ddlIdCategoria" runat="server">
+                            <asp:ListItem Value="=">Igual a</asp:ListItem>
+                            <asp:ListItem Value="&lt;">Mayor a</asp:ListItem>
+                            <asp:ListItem Value="&gt;">Menor a</asp:ListItem>
                         </asp:DropDownList>
                     </td>
                     <td>
-                        <asp:TextBox ID="txtIdCategoria" runat="server" Width="145px"></asp:TextBox>
+                        <asp:TextBox ID="txtIdCategoria" runat="server" Width="137px"></asp:TextBox>
                     </td>
                 </tr>
                 <tr>
@@ -53,7 +59,7 @@
                     <td class="auto-style3">&nbsp;</td>
                     <td>
                         <asp:Button ID="btnFiltro" runat="server" OnClick="btnFiltro_Click" Text="Filtrar" />
-&nbsp;<asp:Button ID="btnSacarFiltros" runat="server" Text="Sacar filtros" />
+&nbsp;<asp:Button ID="btnSacarFiltros" runat="server" Text="Sacar filtros" OnClick="btnSacarFiltros_Click" />
                     </td>
                 </tr>
             </table>
