@@ -1,6 +1,24 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="WebForm2.aspx.cs" Inherits="prototipoTP4.WebForm2" %>
 
 <!DOCTYPE html>
+<script runat="server">
+
+    protected void gvProductos_SelectedIndexChanged(object sender, EventArgs e)
+    {
+
+    }
+
+    protected void gvCategorias_SelectedIndexChanged(object sender, EventArgs e)
+    {
+
+    }
+
+    protected void btnFiltro_Click(object sender, EventArgs e)
+    {
+
+    }
+</script>
+
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
@@ -65,7 +83,7 @@
             </table>
             <br />
             <br />
-            <asp:GridView ID="gvProductos" runat="server">
+            <asp:GridView ID="gvProductos" runat="server" OnSelectedIndexChanged="gvProductos_SelectedIndexChanged">
             </asp:GridView>
             <br />
         </div>

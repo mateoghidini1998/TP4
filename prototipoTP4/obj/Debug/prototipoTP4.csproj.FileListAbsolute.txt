@@ -116,3 +116,7 @@ C:\Users\USUARIO\OneDrive\Escritorio\Facultad\Programacioy Laboratorio\PROGRAMAC
 C:\Users\USUARIO\OneDrive\Escritorio\Facultad\Programacioy Laboratorio\PROGRAMACION 3\TP4\prototipoTP4\obj\Debug\prototipoTP4.csproj.CopyComplete
 C:\Users\USUARIO\OneDrive\Escritorio\Facultad\Programacioy Laboratorio\PROGRAMACION 3\TP4\prototipoTP4\obj\Debug\prototipoTP4.dll
 C:\Users\USUARIO\OneDrive\Escritorio\Facultad\Programacioy Laboratorio\PROGRAMACION 3\TP4\prototipoTP4\obj\Debug\prototipoTP4.pdb
+C:\Users\Mateo\Desktop\UTN\Programacion 3\TP4\TP4\prototipoTP4\obj\Debug\prototipoTP4.csprojAssemblyReference.cache
+C:\Users\Mateo\Desktop\UTN\Programacion 3\TP4\TP4\prototipoTP4\obj\Debug\prototipoTP4.csproj.CoreCompileInputs.cache
+C:\Users\Mateo\Desktop\UTN\Programacion 3\TP4\TP4\prototipoTP4\obj\Debug\prototipoTP4.dll
+C:\Users\Mateo\Desktop\UTN\Programacion 3\TP4\TP4\prototipoTP4\obj\Debug\prototipoTP4.pdb

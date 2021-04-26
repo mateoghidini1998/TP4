@@ -19,13 +19,15 @@ namespace prototipoTP4
                 cn.Open();
 
                 SqlCommand cmd = new SqlCommand("Select * from Productos", cn);
+                
                 SqlDataReader dr = cmd.ExecuteReader();
 
                 gvProductos.DataSource = dr;
                 gvProductos.DataBind();
+                
+            } 
+           
 
-                cn.Close();
-            }  
         }
 
         protected void btnFiltro_Click(object sender, EventArgs e)
@@ -37,8 +39,34 @@ namespace prototipoTP4
             }
             if (txtIdProducto.Text.Trim() == "" && txtIdCategoria.Text.Trim() != "")
             {
-                
+                filtroCategorias();
+                return;
             }
+
+    
+            
+
+            try
+             {
+                 var = Convert.ToInt32(txtIdProducto.Text);
+                 aux = Convert.ToInt32(txtIdCategoria.Text);
+             }
+            catch
+             {
+                 return;
+             }
+
+             SqlConnection cn = new SqlConnection(RutaBD);
+             cn.Open();
+             SqlCommand cmd = new SqlCommand("select * from categorias where IdCategoria " + ddlIdCategoria.SelectedValue + aux, cn + "AND productos.IdProducto " + ddlIdProducto.SelectedValue + var,cn);
+             SqlDataReader dr = cmd.ExecuteReader();
+             gvProductos.DataSource = dr;
+             gvProductos.DataBind();
+             cn.Close();
+               
+
+
+            
 
         }
 
@@ -75,5 +103,29 @@ namespace prototipoTP4
             gvProductos.DataBind();
             cn.Close();
         }
+
+        private void filtroCategorias()
+        {
+            int aux;
+
+            try
+            {
+                aux = Convert.ToInt32(txtIdCategoria.Text);
+            }
+            catch
+            {
+                return;
+            }
+
+            SqlConnection cn = new SqlConnection(RutaBD);
+            cn.Open();
+            SqlCommand cmd = new SqlCommand("select * from categorias where IdCategoria " + ddlIdCategoria.SelectedValue + aux, cn);
+            SqlDataReader dr = cmd.ExecuteReader();
+            gvProductos.DataSource = dr;
+            gvProductos.DataBind();
+            cn.Close();
+        }
+
+
     }
 }
